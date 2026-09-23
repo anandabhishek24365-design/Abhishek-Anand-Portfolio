@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a software developer's skills, projects, and experience through a sleek, recruiter-friendly portfolio designed to attract opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
