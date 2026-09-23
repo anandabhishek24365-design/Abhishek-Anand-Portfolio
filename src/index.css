@@ -626,6 +626,9 @@ a, button { transition: all 0.2s ease; }
     0 0 30px rgba(40,80,220,.4),
     0 0 70px rgba(20,40,180,.25);
   display: block;
+  position: relative;
+  z-index: 2;
+  background-color: #0f172a;
 }
 
 /* Name */

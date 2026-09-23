@@ -7,7 +7,7 @@ import {
   isSupabaseConfigured,
   ContactMessageRecord,
 } from "./lib/supabase";
-import profilePhoto from "@/imports/profilePhoto.jpg";
+import profilePhoto from "./imports/profilePhotoData";
 // ─── Premium dot + ring cursor ────────────────────────────────────────────────
 
 function CustomCursor() {

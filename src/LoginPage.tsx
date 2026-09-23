@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import profilePhoto from "@/imports/profilePhoto.jpg";
+import profilePhoto from "./imports/profilePhotoData";
 function FlameCursor() {
   const dotEl   = useRef<HTMLDivElement>(null);
   const ringEl  = useRef<HTMLDivElement>(null);
@@ -735,7 +735,11 @@ export default function LoginPage({ onLogin }: { onLogin: () => void }) {
         <div className="lock-avatar-wrap">
           <div className="lock-avatar-ring" />
           <div className="lock-avatar-ring lock-avatar-ring-outer" />
-          <img src={profilePhoto} alt="Abhishek" className="lock-avatar-img" />
+          <img
+            src={profilePhoto}
+            alt="Abhishek"
+            className="lock-avatar-img"
+          />
         </div>
 
         {/* Name */}
