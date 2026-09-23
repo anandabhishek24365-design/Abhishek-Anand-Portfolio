@@ -1,7 +1,8 @@
 {
-  "description": "Showcases a software developer's skills, projects, and experience through a sleek, recruiter-friendly portfolio designed to attract opportunities.",
+  "title": "Abhishek Anand | Software Developer Portfolio",
+  "description": "Showcases Abhishek Anand's skills, projects, and experience through a sleek, recruiter-friendly software developer portfolio.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
