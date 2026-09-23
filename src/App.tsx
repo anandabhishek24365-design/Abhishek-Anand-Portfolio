@@ -585,7 +585,7 @@ function Navbar({ onLogout }: { onLogout?: () => void }) {
           transition: "all 0.3s ease",
         }}
       >
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+        <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
             {/* Logo */}
             <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ display: "flex", alignItems: "center", gap: 12, background: "none", border: "none", cursor: "pointer" }}>
@@ -811,7 +811,7 @@ function Hero() {
       <div style={{ position: "absolute", top: "20%", left: "-8%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(99,102,241,0.09) 0%, transparent 65%)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", bottom: "10%", right: "5%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(167,139,250,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px", width: "100%", paddingTop: 96, paddingBottom: 64, position: "relative", zIndex: 1 }}>
+      <div className="container-custom hero-container" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px", width: "100%", paddingTop: 96, paddingBottom: 64, position: "relative", zIndex: 1 }}>
         <div className="hero-grid">
           {/* Left */}
           <div>
@@ -893,7 +893,7 @@ function Hero() {
 function Stats() {
   return (
     <section style={{ background: "var(--bg-2)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "52px 40px" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "52px 40px" }}>
         <div className="stats-grid">
           {STATS.map((s, i) => (
             <FadeIn key={i} delay={i * 80}>
@@ -918,9 +918,9 @@ function Stats() {
 
 function About() {
   return (
-    <section id="about" style={{ background: "var(--bg)", padding: "100px 0", position: "relative", overflow: "hidden" }}>
+    <section id="about" className="section-padding" style={{ background: "var(--bg)", padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: "40%", right: "-5%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
         <FadeIn>
           <p className="section-label" style={{ marginBottom: 16 }}>// about_me</p>
         </FadeIn>
@@ -1039,8 +1039,8 @@ function About() {
 
 function Skills() {
   return (
-    <section id="skills" style={{ background: "var(--bg-2)", padding: "100px 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+    <section id="skills" className="section-padding" style={{ background: "var(--bg-2)", padding: "100px 0" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
         <FadeIn>
           <p className="section-label" style={{ marginBottom: 16 }}>// tech_stack</p>
           <h2 style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 8 }}>
@@ -1160,8 +1160,8 @@ function ProjectCard({ p, reverse }: { p: (typeof PROJECTS)[0]; reverse?: boolea
 
 function Projects() {
   return (
-    <section id="projects" style={{ background: "var(--bg)", padding: "100px 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+    <section id="projects" className="section-padding" style={{ background: "var(--bg)", padding: "100px 0" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
         <FadeIn>
           <p className="section-label" style={{ marginBottom: 16 }}>// selected_projects</p>
           <h2 style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text)", marginBottom: 8 }}>
@@ -1186,8 +1186,8 @@ function Projects() {
 
 function Experience() {
   return (
-    <section id="experience" style={{ background: "var(--bg-2)", padding: "100px 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+    <section id="experience" className="section-padding" style={{ background: "var(--bg-2)", padding: "100px 0" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
         <div className="exp-grid">
           {/* Timeline */}
           <div>
@@ -1240,7 +1240,7 @@ function Experience() {
                 Projects at NIIT University
               </h2>
             </FadeIn>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(480px, 1fr))", gap: 24 }}>
+            <div className="uni-projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(480px, 1fr))", gap: 24 }}>
               {[
                 {
                   num: "01", title: "Ecosphere-X", subtitle: "Renewable Energy-Backed Microplanning",
@@ -1308,7 +1308,7 @@ function Experience() {
                     }}
                   >
                     {/* Header row */}
-                    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
+                    <div className="uni-card-header" style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
                       <div>
                         <span style={{
                           display: "inline-block", padding: "3px 10px", borderRadius: 20,
@@ -1424,7 +1424,7 @@ function Experience() {
 
             {/* Repo cards */}
             <FadeIn delay={160}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              <div className="repo-cards-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
                 {REPOS.map(r => (
                   <a
                     key={r.name}
@@ -1501,9 +1501,9 @@ function Contact() {
   };
 
   return (
-    <section id="contact" style={{ background: "var(--bg)", padding: "100px 0", position: "relative", overflow: "hidden" }}>
+    <section id="contact" className="section-padding" style={{ background: "var(--bg)", padding: "100px 0", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: "30%", left: "50%", transform: "translateX(-50%)", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 1 }}>
+      <div className="container-custom" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 1 }}>
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
             <p className="section-label" style={{ marginBottom: 16 }}>// contact</p>
@@ -1589,7 +1589,7 @@ function Contact() {
 
           {/* Form */}
           <FadeIn delay={100}>
-            <div className="card" style={{ padding: 36 }}>
+            <div className="card contact-form-card" style={{ padding: 36 }}>
               {status === "success" ? (
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 16, padding: "48px 0" }}>
                   <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>✓</div>
@@ -1599,7 +1599,7 @@ function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+                  <div className="contact-form-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
                     {[
                       { field: "name" as const, label: "Name", placeholder: "Abhishek Anand", type: "text" },
                       { field: "email" as const, label: "Email", placeholder: "you@example.com", type: "email" },
@@ -1678,7 +1678,7 @@ function Footer() {
 
   return (
     <footer style={{ background: "var(--bg-2)", borderTop: "1px solid var(--border)", padding: "32px 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
+      <div className="container-custom" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 40px" }}>
         <div className="footer-inner">
           <p style={{ fontSize: 13, color: "var(--text-3)" }}>© 2026 Abhishek Anand</p>
           <p className="mono" style={{ fontSize: 12, color: "var(--text-3)" }}>Built with curiosity &amp; code.</p>
