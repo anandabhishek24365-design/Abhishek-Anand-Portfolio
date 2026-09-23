@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import profilePhoto from "@/imports/WhatsApp_Image_2026-09-08_at_11.27.05_AM.jpeg";
+import profilePhoto from "@/imports/profilePhoto.jpg";
 function FlameCursor() {
   const dotEl   = useRef<HTMLDivElement>(null);
   const ringEl  = useRef<HTMLDivElement>(null);
